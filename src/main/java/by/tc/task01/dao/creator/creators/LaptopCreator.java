@@ -4,6 +4,9 @@ import by.tc.task01.dao.creator.ApplianceCreator;
 import by.tc.task01.entity.Appliance;
 import by.tc.task01.entity.Laptop;
 
+/**
+ * Represents creator of a laptop appliance
+ */
 public class LaptopCreator implements ApplianceCreator {
 
     private static final String BATTERY_CAPACITY = "BATTERY_CAPACITY";
@@ -13,6 +16,9 @@ public class LaptopCreator implements ApplianceCreator {
     private static final String CPU = "CPU";
     private static final String DISPLAY_INCHS = "DISPLAY_INCHS";
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Appliance create(String values) {
         String[] criterias = values.split(", ");

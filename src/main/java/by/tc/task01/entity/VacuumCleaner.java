@@ -3,6 +3,9 @@ package by.tc.task01.entity;
 import by.tc.task01.entity.criteria.SearchCriteria;
 import by.tc.task01.entity.enums.FilterType;
 
+/**
+ * Represents the laptop appliance
+ */
 public class VacuumCleaner extends Appliance{
 	public int powerConsumption;
 	public FilterType filterType;
@@ -17,6 +20,9 @@ public class VacuumCleaner extends Appliance{
 				powerConsumption, filterType.toString(), bagType, wandType, motorSpeedRegulation, cleaningWidth);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean matches(String key, Object value) {
 		return switch (SearchCriteria.VacuumCleaner.valueOf(key)){

@@ -4,6 +4,9 @@ import by.tc.task01.dao.creator.ApplianceCreator;
 import by.tc.task01.entity.Appliance;
 import by.tc.task01.entity.Refrigerator;
 
+/**
+ * Represents creator of a refrigerator appliance
+ */
 public class RefrigeratorCreator implements ApplianceCreator {
     private static final String POWER_CONSUMPTION = "POWER_CONSUMPTION";
     private static final String WEIGHT = "WEIGHT";
@@ -12,6 +15,9 @@ public class RefrigeratorCreator implements ApplianceCreator {
     private static final String HEIGHT = "HEIGHT";
     private static final String WIDTH = "WIDTH";
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Appliance create(String values) {
         String[] criterias = values.split(", ");

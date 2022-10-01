@@ -2,11 +2,12 @@ package by.tc.task01.dao.creator.creators;
 
 import by.tc.task01.dao.creator.ApplianceCreator;
 import by.tc.task01.entity.Appliance;
-import by.tc.task01.entity.TabletPC;
 import by.tc.task01.entity.VacuumCleaner;
-import by.tc.task01.entity.enums.ColorType;
 import by.tc.task01.entity.enums.FilterType;
 
+/**
+ * Represents creator of a vacuum cleaner appliance
+ */
 public class VacuumCleanerCreator implements ApplianceCreator {
     private static final String POWER_CONSUMPTION = "POWER_CONSUMPTION";
     private static final String FILTER_TYPE = "FILTER_TYPE";
@@ -15,6 +16,9 @@ public class VacuumCleanerCreator implements ApplianceCreator {
     private static final String MOTOR_SPEED_REGULATION = "MOTOR_SPEED_REGULATION";
     private static final String CLEANING_WIDTH = "CLEANING_WIDTH";
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Appliance create(String values) {
         String[] criterias = values.split(", ");

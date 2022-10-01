@@ -2,6 +2,9 @@ package by.tc.task01.entity;
 
 import by.tc.task01.entity.criteria.SearchCriteria;
 
+/**
+ * Represents the Speakers appliance
+ */
 public class Speakers extends Appliance{
 	public int powerConsumption;
 	public int numberOfSpeakers;
@@ -14,6 +17,9 @@ public class Speakers extends Appliance{
 				powerConsumption, numberOfSpeakers, frequencyRange, cordLength);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean matches(String key, Object value) {
 		return switch (SearchCriteria.Speakers.valueOf(key)){

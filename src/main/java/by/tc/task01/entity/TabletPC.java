@@ -3,6 +3,9 @@ package by.tc.task01.entity;
 import by.tc.task01.entity.criteria.SearchCriteria;
 import by.tc.task01.entity.enums.ColorType;
 
+/**
+ * Represents the TabletPC appliance
+ */
 public class TabletPC extends Appliance{
     public int batteryCapacity;
     public int displayInches;
@@ -16,6 +19,9 @@ public class TabletPC extends Appliance{
                 batteryCapacity, displayInches, memoryRom, flashMemoryCapacity, color.toString());
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean matches(String key, Object value) {
         return switch (SearchCriteria.TabletPC.valueOf(key)){

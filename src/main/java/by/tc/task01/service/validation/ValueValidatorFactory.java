@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Factory class of a criteria validator
+ */
 public class ValueValidatorFactory {
     private static final ValueValidatorFactory instance= new ValueValidatorFactory();
 
     private final Map<List<String>, ValueValidator> map = new HashMap<List<String>, ValueValidator>();
 
+    /**
+     * Instantiates a map of search criteria to allowed search type and value validator
+     */
     private ValueValidatorFactory() {
         map.put(List.of(SearchCriteria.TabletPC.COLOR.name()), new ColorValidator());
         map.put(List.of(SearchCriteria.Oven.HEIGHT.name(), SearchCriteria.Oven.WIDTH.name(),
@@ -34,8 +40,17 @@ public class ValueValidatorFactory {
                         SearchCriteria.VacuumCleaner.WAND_TYPE.name()), new StringValidator());
     }
 
+    /**
+     * Gets the instance of a factory
+     * @return instance of a factory
+     */
     public static ValueValidatorFactory getInstance(){ return instance; }
 
+    /**
+     * Gets the correct validator for a specific search criteria
+     * @param searchCriteria search criteria to get validator for
+     * @return validator for criteria or null if criteria is invalid
+     */
     public ValueValidator getValidator(String searchCriteria) {
 
         for (Map.Entry<List<String>, ValueValidator> entry : map.entrySet()) {

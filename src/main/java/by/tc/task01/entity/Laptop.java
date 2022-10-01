@@ -2,6 +2,9 @@ package by.tc.task01.entity;
 
 import by.tc.task01.entity.criteria.SearchCriteria;
 
+/**
+ * Represents the laptop appliance
+ */
 public class Laptop extends Appliance{
 	public double batteryCapacity;
 	public String os;
@@ -16,6 +19,9 @@ public class Laptop extends Appliance{
 				batteryCapacity, os, memoryRom, systemMemory,cpu, displayInchs);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean matches(String key, Object value) {
 		return switch (SearchCriteria.Laptop.valueOf(key)){

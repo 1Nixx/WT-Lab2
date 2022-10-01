@@ -2,6 +2,9 @@ package by.tc.task01.entity;
 
 import by.tc.task01.entity.criteria.SearchCriteria;
 
+/**
+ * Represents the Oven appliance
+ */
 public class Oven extends Appliance{
 	public int powerConsumption;
 	public int weight;
@@ -16,6 +19,9 @@ public class Oven extends Appliance{
 				powerConsumption, weight, capacity, depth, height, width);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean matches(String key, Object value) {
 		return switch (SearchCriteria.Oven.valueOf(key)){

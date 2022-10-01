@@ -5,6 +5,9 @@ import by.tc.task01.entity.Appliance;
 import by.tc.task01.entity.TabletPC;
 import by.tc.task01.entity.enums.ColorType;
 
+/**
+ * Represents creator of a tabletPC appliance
+ */
 public class TabletPCCreator implements ApplianceCreator {
     private static final String BATTERY_CAPACITY = "BATTERY_CAPACITY";
     private static final String DISPLAY_INCHES = "DISPLAY_INCHES";
@@ -12,6 +15,9 @@ public class TabletPCCreator implements ApplianceCreator {
     private static final String FLASH_MEMORY_CAPACITY = "FLASH_MEMORY_CAPACITY";
     private static final String COLOR = "COLOR";
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Appliance create(String values) {
         String[] criterias = values.split(", ");

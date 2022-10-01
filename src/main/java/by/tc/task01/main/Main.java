@@ -9,10 +9,15 @@ import by.tc.task01.entity.criteria.SearchCriteria;
 import by.tc.task01.service.ApplianceService;
 import by.tc.task01.service.ServiceFactory;
 
-import java.awt.*;
-
+/**
+ * Main class of a console program
+ */
 public class Main {
 
+	/**
+	 * Main method
+	 * @param args console arguments
+	 */
 	public static void main(String[] args) {
 		Appliance appliance;
 

@@ -4,12 +4,18 @@ import by.tc.task01.dao.creator.ApplianceCreator;
 import by.tc.task01.entity.Appliance;
 import by.tc.task01.entity.Speakers;
 
+/**
+ * Represents creator of a speakers appliance
+ */
 public class SpeakersCreator implements ApplianceCreator {
     private static final String POWER_CONSUMPTION = "POWER_CONSUMPTION";
     private static final String NUMBER_OF_SPEAKERS = "NUMBER_OF_SPEAKERS";
     private static final String FREQUENCY_RANGE = "FREQUENCY_RANGE";
     private static final String CORD_LENGTH = "CORD_LENGTH";
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Appliance create(String values) {
         String[] criterias = values.split(", ");

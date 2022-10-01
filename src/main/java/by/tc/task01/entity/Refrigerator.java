@@ -2,6 +2,9 @@ package by.tc.task01.entity;
 
 import by.tc.task01.entity.criteria.SearchCriteria;
 
+/**
+ * Represents the refrigerator appliance
+ */
 public class Refrigerator extends Appliance{
 	public int powerConsumption;
 	public int weight;
@@ -16,6 +19,9 @@ public class Refrigerator extends Appliance{
 				powerConsumption, weight, freezerCapacity, overallCapacity, height, width);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean matches(String key, Object value) {
 		return switch (SearchCriteria.Refrigerator.valueOf(key)){

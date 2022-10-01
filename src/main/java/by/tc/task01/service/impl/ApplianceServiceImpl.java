@@ -7,8 +7,15 @@ import by.tc.task01.entity.criteria.Criteria;
 import by.tc.task01.service.ApplianceService;
 import by.tc.task01.service.validation.Validator;
 
-public class ApplianceServiceImpl implements ApplianceService{
+/**
+ * Implementation of appliance service that works with
+ * appliance dao impl
+ */
+public class ApplianceServiceImpl implements ApplianceService {
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public Appliance find(Criteria criteria) {
 		if (!Validator.criteriaValidator(criteria)) {
@@ -24,5 +31,3 @@ public class ApplianceServiceImpl implements ApplianceService{
 	}
 
 }
-
-//you may add your own new classes

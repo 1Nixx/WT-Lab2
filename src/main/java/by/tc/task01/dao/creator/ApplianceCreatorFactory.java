@@ -15,12 +15,12 @@ public class ApplianceCreatorFactory {
     private Map<String, ApplianceCreator> creators = new HashMap<>();
 
     private ApplianceCreatorFactory() {
-        creators.put("Oven", new OvenCreator());
-        creators.put("Laptop", new LaptopCreator());
-        creators.put("Refrigerator", new RefrigeratorCreator());
-        creators.put("VacuumCleaner", new VacuumCleanerCreator());
-        creators.put("TabletPC", new TabletPCCreator());
-        creators.put("Speakers", new SpeakersCreator() );
+        creators.put("oven", new OvenCreator());
+        creators.put("laptop", new LaptopCreator());
+        creators.put("refrigerator", new RefrigeratorCreator());
+        creators.put("vacuumCleaner", new VacuumCleanerCreator());
+        creators.put("tabletPC", new TabletPCCreator());
+        creators.put("speakers", new SpeakersCreator() );
     }
 
     /**
